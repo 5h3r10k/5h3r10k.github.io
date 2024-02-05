@@ -10,55 +10,77 @@ body {
     width: 100%;
 }
 
+p {
+    font-size: 14px;
+    text-align: left;
+    /* margin: 0; */
+}
+
+h2 {
+    padding-top: 20px;
+    font-size: 24px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 
 
 
 #headbar {
     background-color: green;
     width: 100%;
-    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
 }
 
 #logo {
+    padding: 10px;
     float: left;
-    width: 10%;
-    height: 100%;
     background-color: pink;
     text-align: center;
 }
 
 #title {
-    display: flex;
-    float: right;
-    width: 50%;
-    height: 100%;
     background-color: yellow;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
+    text-align: right;
+    flex: 1;
+    padding: 16px;
 }
 
 #title h1 {
-    margin: 0;
-    padding: 0;
     font-size: 20px;
     color: blue;
+    margin: 0;
 }
+
 
 
 
 #navbar {
     background-color: midnightblue;
     width: 100%;
-    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 12px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
 }
 
-#jumpto {
-    float: left;
-    width: 10%;
-    height: 100%;
-    text-align: center;
-    color: white;
+.navbar-button{
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    background-color: lightseagreen;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 16px;
 }
 
 
@@ -68,33 +90,45 @@ body {
     background-color: aliceblue;
     width: 100%;
     box-sizing: border-box;
-    padding: 40px;
-
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
 }
 
-#main p {
-    text-align: justify;
-    font-size: 16px;
-}
 
-#gallery img{
-    width: 40px;
-}
+
 
 #gallery-view{
     overflow-x: auto;
     white-space: nowrap;
 }
 
-#gallery-view img{
-    width: 300px;
+#gallery-view figure{
+    width: 200px;
     padding: 5px;
+    display: inline-block;
+    margin: 0;
+    padding-bottom: 20px;
 }
+
+#gallery-view img{
+    width: 100%;
+}
+
+#gallery-view figcaption{
+    text-align: center;
+    font-style: italic;
+    font-size: 12px;
+}
+
+
+
 
 #itemdata-view{
     width: 100%;
     overflow-x: auto;
     padding: 4px;
+    box-sizing: border-box;
 }
 
 #itemdata{
@@ -109,7 +143,7 @@ body {
 #itemdata th{
     background-color: #4CAF50;
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     padding: 4px;
 }
 
@@ -117,11 +151,63 @@ body {
     text-align: center;
     padding: 10px;
     border: 0px;
+    font-size: 14px;
 }
 
 #itemdata tr:nth-child(even){
     background-color: rgb(192, 229, 242);
 }
+
+
+
+
+#profile{
+    width: 85%;
+    padding: 4px;
+    border: 2px solid midnightblue;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+    background-color: rgb(132, 103, 245);
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+#profile-intro{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex: 0 0 auto;
+    width: 200px;
+    box-sizing: border-box;
+}
+
+#pfp{
+    width: 100px;
+    border-radius: 50%;
+}
+
+#linkedin-logo{
+    width: 80px;
+}
+
+#profile-text{
+    padding: 10px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    /* min-width: 300px; */
+    box-sizing: border-box;
+}
+
+
 
 
 #footer {
@@ -136,3 +222,21 @@ body {
     font-size: 10px;
     margin: 0;
 }
+
+
+
+
+
+
+
+
+@media (max-width: 800px) {
+    #profile-intro {
+      width:100%; /* Make the specific-width container take full width on smaller screens */
+    }
+
+    #profile-text {
+        min-width: none; /* Override the min-width set earlier */
+    }
+  }
+  
