@@ -1,0 +1,100 @@
+html {
+    scroll-behavior: smooth;
+    font-family: "Comic Sans MS", cursive, sans-serif; /* Change for garish look */
+    width: 100%;
+}
+
+body {
+    background-color: #FF00FF; /* Bright pink background */
+    margin: 0;
+    padding: 20px; /* Add padding to the body */
+    width: 100%;
+    color: #00FF00; /* Bright green text */
+}
+
+p {
+    font-size: 18px; /* Larger font size */
+    text-align: justify;
+    color: #FFFF00; /* Bright yellow text */
+    background-color: #0000FF; /* Blue background */
+    margin: 10px;
+    padding: 15px;
+    border: 2px dashed red; /* Red dashed border */
+    font-family: "Papyrus", fantasy; /* Change font for more effect */
+}
+
+h1 {
+    font-size: 48px; /* Very large font size */
+    color: #FFA500; /* Orange text */
+    background-color: #4B0082; /* Indigo background */
+    margin: 5px;
+    padding: 10px;
+    border: 5px dotted #FFFFFF; /* White dotted border */
+    text-align: center;
+}
+
+h2 {
+    padding-top: 20px;
+    font-size: 36px; /* Larger font size */
+    color: #8A2BE2; /* Blueviolet text */
+    background-color: #00FFFF; /* Cyan background */
+    margin: 5px;
+    padding: 10px;
+    border: 3px groove #FFD700; /* Gold groove border */
+}
+
+ul {
+    background-color: #FF1493; /* Deep pink background */
+    color: #000080; /* Navy text */
+    padding: 20px;
+}
+
+li {
+    font-size: 20px; /* Larger font size */
+    background-color: #7FFFD4; /* Aquamarine background */
+    margin: 10px;
+    padding: 5px;
+    border: 2px solid #FF4500; /* Orange red border */
+}
+
+a {
+    color: #FFD700; /* Gold text */
+    background-color: #6A5ACD; /* Slate blue background */
+    font-size: 16px;
+    padding: 5px;
+    margin: 5px;
+    border: 2px solid #DC143C; /* Crimson border */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Styles for table and its components */
+table {
+    border: 3px solid #FF1493; /* Deep pink */
+    background-color: #8B008B; /* Dark magenta */
+}
+
+th {
+    font-size: 24px; /* Larger font size */
+    background-color: #FFA07A; /* Light salmon background */
+    color: #2E8B57; /* Sea green text */
+    padding: 10px;
+    border: 2px solid #0000CD; /* Medium blue border */
+}
+
+td {
+    font-size: 18px;
+    background-color: #FFFFE0; /* Light yellow background */
+    color: #FF6347; /* Tomato text */
+    padding: 10px;
+    border: 1px solid #B22222; /* Firebrick border */
+}
+
+tr:nth-child(even) {
+    background-color: #FFE4B5; /* Moccasin background */
+}
+
+tr:nth-child(odd) {
+    background-color: #FFEFD5; /* Papaya whip background */
+}
+
+/* I need to modify existing ID and class selectors as needed to align with the new garish theme */
