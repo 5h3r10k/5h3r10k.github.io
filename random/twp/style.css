@@ -16,7 +16,8 @@ body {
 p {
     font-size: 14px;
     text-align: left;
-    /* margin: 0; */
+    margin: 0;
+    line-height: 1.5;
 }
 
 h1 {
@@ -26,9 +27,16 @@ h1 {
 
 h2 {
     padding-top: 20px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     font-size: 24px;
     margin: 0;
+}
+
+h3 {
+    font-size: 18px;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 * {
@@ -39,10 +47,23 @@ h2 {
     width: 3%;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .scroll-to-top img{
     width: 100%;
+}
+
+.intext-link{
+    color: blue;
+    text-decoration: none;
+    font-style: italic;
+}
+
+.intext-link:hover{
+    color: darkblue;
+    background-color: lightblue;
 }
 
 
@@ -67,13 +88,21 @@ h2 {
     background-color: yellow;
     text-align: right;
     flex: 1;
-    padding: 16px;
+    padding: 10px;
 }
 
 #title h1 {
     font-size: 20px;
     color: blue;
     margin: 0;
+}
+
+#title #subtitle {
+    font-size: 14px;
+    color: brown;
+    margin: 0;
+    font-style: italic;
+    font-weight: bold;
 }
 
 .navbar {
@@ -106,6 +135,11 @@ h2 {
     color: white;
 }
 
+#sitenav .navbar-button:hover{
+    background-color: lightgreen;
+    color: black;
+}
+
 #pagenav{
     background-color: midnightblue;
 }
@@ -113,6 +147,11 @@ h2 {
 #pagenav .navbar-button{
     background-color: lightseagreen;
     color: black;
+}
+
+#pagenav .navbar-button:hover{
+    background-color: darkred;
+    color: white;
 }
 
 
@@ -133,16 +172,18 @@ h2 {
 
 
 #gallery-view{
-    overflow-x: auto;
-    white-space: nowrap;
+    display: grid;
+    width: 85%;
+    gap: 20px;
+    grid-template-columns: repeat(5, 1fr);
+    padding-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #gallery-view figure{
-    width: 200px;
-    padding: 5px;
-    display: inline-block;
-    margin: 0;
-    padding-bottom: 20px;
+    width: 100%;
+    margin:0;
 }
 
 #gallery-view img{
@@ -277,6 +318,26 @@ h2 {
     }
     .scroll-to-top{
         width: 10%;
+    }
+
+
+
+    #gallery-view{
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        width: 100%;
+    }
+    
+    #gallery-view figure{
+        width: 200px;
+        padding: 5px;
+        display: inline-block;
+        padding-bottom: 20px;
+    }
+    
+    #gallery-view img{
+        width: 100%;
     }
   }
   
