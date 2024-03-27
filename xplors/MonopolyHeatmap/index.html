@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="validator.js" defer></script>
+    <script src="generator.js" defer></script>
+    <title>Monopoly Heatmap</title>
+</head>
+
+<body>
+
+    <div id="headbar">
+        <h1>Monopoly Heatmap</h1>
+    </div>
+
+    <div id="content">
+
+        <div id="inputs">
+
+            <h2>Inputs</h2>
+
+            <div id="input1" class="inputWidget">
+                <div class ="inputItem">
+                    <h3 title="Number of spaces on the edge of the board">Board Edge Size</h3>
+                    <input type="number" id="boardSize" min="2" max="20" value="11">
+                </div>
+                <p class = "inputRange">Enter a value between 2 and 20</p>
+            </div>
+
+            <div id="input2" class="inputWidget">
+                <div class ="inputItem">
+                    <h3>Number of six-sided dice</h3>
+                    <input type="number" id="numDice" min="1" max="6" value="2">
+                </div>
+                <p class = "inputRange">Enter a value between 1 and 6</p>
+            </div>
+
+            <div id="input3" class="inputWidget">
+                <div class ="inputItem">
+                    <h3>Number of rolls</h3>
+                    <input type="number" id="numRolls" min="1" max="1000000" value="1000">
+                </div>
+                <p class = "inputRange">Enter a value between 1 and 1000000</p>
+            </div>
+
+            <div id="submit">
+                <button id="submitBtn">Let's Roll</button>
+            </div>
+
+
+
+        </div>
+
+        <div id="output">
+            <h2>Output</h2>
+            <div id="board">
+                Click "Let's Roll" to generate a heatmap
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+
+</html>

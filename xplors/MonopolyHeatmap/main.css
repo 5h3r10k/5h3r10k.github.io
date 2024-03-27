@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+/* For outlining all div */
+* {
+    border: 1px solid red;
+}
+
+
+
+
+/* BODY */
+
+body {
+    background-color: aliceblue;
+    font-family: Roboto, Verdana, sans-serif;
+    height: 100%;
+}
+
+
+
+
+/* HEAD BAR */
+
+#headbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+
+    background-color: midnightblue;
+}
+
+#headbar h1 {
+    color: white;
+}
+
+
+
+
+/* Content */
+
+#content {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 20px;
+    padding: 20px;
+}
+
+
+
+
+/* Inputs and Output containers */
+
+#inputs {
+    width: 30%;
+    padding: 20px;
+}
+
+#output {
+    width: 50%;
+    padding: 20px;
+}
+
+#output h2 {
+    text-align: center;
+}
+
+
+
+
+/* Input form */
+
+#inputs h2 {
+    text-align: center;
+}
+
+.inputWidget {
+    padding: 10px;
+}
+
+.inputItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.inputItem h3 {
+    text-align: center;
+}
+
+.inputItem input {
+    width: 30%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+}
+
+.inputRange {
+    font-style: italic;
+    font-size: 12px;
+}
+
+#submit {
+    width: 100%;
+    text-align: center;
+}
+
+#submitBtn {
+    width: 50%;
+    padding: 10px;
+    background-color: midnightblue;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* Board container */
+
+#board {
+    display: grid;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    aspect-ratio: 1;
+    padding: 10px;
+    text-align: center;
+}
+
+.space {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+    font-size: 14px;
+}
+
+
+
+
+
+/* Media Queries */
+
+@media screen and (max-width: 800px) {
+    #content {
+        flex-direction: column;
+    }
+
+    #inputs {
+        width: 100%;
+    }
+
+    #output {
+        width: 100%;
+    }
+
+    .inputItem{
+        flex-direction: column;
+    }
+
+    .inputRange{
+        text-align: center;
+    }
+}
