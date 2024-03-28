@@ -40,6 +40,8 @@ function getRandomNumber(min, max) {
 function simulateRolls(numSpaces, numDice, numRolls, diceMin=1, diceMax=6) {
     let spaces = new Array(numSpaces).fill(0); // Create array of spaces with 0s
 
+    let rollFreq = new Array(numDice * (diceMax - diceMin + 1)).fill(0); // Create array to store the frequency of each number roll
+
     let currentSpace = 0; // Start at space 0
 
     for (let i = 0; i < numRolls; i++) {
@@ -52,7 +54,19 @@ function simulateRolls(numSpaces, numDice, numRolls, diceMin=1, diceMax=6) {
 
         currentSpace = (currentSpace + rollTotal) % numSpaces; // Calculate the next space
         spaces[currentSpace]++; // Increment the number of rolls on the space
+        
+        // Add the roll to the frequency array
+        rollFreq[rollTotal-1]++;
     }
+
+    console.log("Roll counts:")
+    console.log(rollFreq);
+
+    // divide all elements in rollFreq by numRolls to get the percentage of each roll
+    rollFreq = rollFreq.map(roll => roll / numRolls * 100);
+
+    console.log("Roll percentages:")
+    console.log(rollFreq);
 
     return spaces;
 }
