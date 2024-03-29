@@ -128,6 +128,8 @@ function fillBoard(spaces) {
         let percentage = (rolls / maxRolls) * 100; // Calculate the percentage of rolls
 
         space.style.backgroundColor = `rgba(0, 128, 0, ${percentage / 100})`; // Set the background color based on the percentage
-        space.textContent = rolls; // Set the text content to the number of rolls
+        
+        // Add the number of rolls to the space (the first space should be "GO" and the number of rolls on a new line, the other spaces should just be the number)
+        space.innerHTML = index === 0 ? `GO <br> ${rolls}` : rolls;
     });
 }
