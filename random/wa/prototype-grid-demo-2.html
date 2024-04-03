@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Grid Demo 2</title>
+	
+<style>
+	
+	body {
+		margin: 0;
+		padding: 0;
+		color: #2a2a2a;
+		background: #5a5a5a;
+		font-family: verdana, helvetica, arial, sans-serif; 
+		font-size: 20px;
+		line-height: 150%;  /* adjust as needed */	
+		}
+
+	.wrapper {
+		background: #ffffff;
+		width: 980px;  /* give the element a fixed width */ 
+		margin-left: auto;
+		margin-right: auto;
+		padding: 1.25rem 2.5rem;
+		}
+	
+	h1 {
+		text-align: center;
+		color: gold;
+		margin-bottom: 2.5rem;		
+		}	
+	
+	.profile-container-2 {
+		display: grid;
+		grid-template-columns: auto 2fr;
+		gap: 2rem 2rem;
+		align-items: top;
+		}
+	
+	.profile-container-3 {
+		display: grid;
+		gap: 1rem 2rem;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: auto auto auto;
+		/* grid-template-areas:
+				"arnop arnob arnob"
+				"glassp glassb glassb"
+				"pegp pegb pegb";
+		} */
+		grid-template-areas:
+				"glassb glassb pegp"
+				"arnop glassp pegp"
+				"arnob glassp pegb";
+		}
+	
+	
+ 	.profile-port {background: darkcyan;}	
+	.profile-bio {background: orange;}	
+
+	
+/* assign each element/class name a grid-area name */	
+	
+	.arno-port {
+		grid-area: arnop;
+	}
+	
+	.arno-bio {
+		grid-area: arnob;		
+	}
+	
+	.glass-port {
+		grid-area: glassp;	
+	}
+	
+	.glass-bio {
+		grid-area: glassb;
+	}
+	
+	.peg-port {
+		grid-area: pegp;
+	}
+	.peg-bio {
+		grid-area: pegb;
+	}
+
+	
+/*	.profile-container-3 img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		}
+*/
+	
+</style>	
+	
+</head>
+
+<body>
+	
+	<div class="wrapper">
+		
+		<h1>Who We Are</h1>
+		
+		<h2>Meet the Team</h2>
+	
+	<div class="profile-container-3">
+	
+		<div class="profile-port arno-port"><img src="images/arno-264.jpg" alt="book"></div>
+	
+		<div class="profile-bio arno-bio"><p>Text about the <strong>Arno Schmidt book</strong>...</p><p>More text about the book...</p></div>	
+		
+		<div class="profile-port glass-port"><img src="images/glasses-264.jpg" alt="glasses"></div>
+	
+		<div class="profile-bio glass-bio"><p>Text about the <strong>green plastic sunglasses</strong>...</p><p>More text about the sunglasses...</p></div>	
+		
+		<div class="profile-port peg-port"><img src="images/pegs-264.jpg" alt="pair of pegs"></div>
+	
+		<div class="profile-bio peg-bio"><p>Text about the <strong>pair of wooden pegs</strong>...</p><p>More text about the pegs...</p></div>			
+		
+	</div><!-- profile container ends-->
+		
+	</div><!-- wrapper ends -->	
+	
+</body>
+</html>
