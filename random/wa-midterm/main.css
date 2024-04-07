@@ -1,10 +1,27 @@
+/* Variables */
+:root {
+    /* structure */
+    --left-padding-percent: 10%;
+    --right-padding-percent: 10%;
+
+    /* colors */
+    --navbar-bg-color: rgb(2, 0, 25);
+    --page-bg-color: rgb(0, 0, 0);
+    --accent1: rgb(76, 167, 246);
+    --accent2: #9290C3;
+    --accent3: #1B1A55;
+}
+
+
+
+
 /* GLOBAL STYLES */
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    list-style-position:inside;
+    list-style-position: inside;
 }
 
 /* for debugging */
@@ -12,10 +29,9 @@
     border: 1px solid red;
 } */
 
-body{
+body {
     font-family: 'Roboto', sans-serif;
-    background-color: aliceblue;
-    width: 80%;
+    background-color: var(--page-bg-color);
     margin: auto;
 }
 
@@ -24,8 +40,17 @@ html {
     background-color: white;
 }
 
-a{
+a {
     text-decoration: none;
+}
+
+p {
+    font-size: 18px;
+    line-height: 150%;
+}
+
+#content{
+    padding-bottom: 20px;
 }
 
 
@@ -34,22 +59,31 @@ a{
 /* NAVIGATION BAR */
 
 #headbar {
-    background-color: #070F2B;
+    background-color: var(--navbar-bg-color);
     width: 100%;
+
     padding: 20px;
+    padding-left: var(--left-padding-percent);
+    padding-right: var(--right-padding-percent);
 
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    gap:20px;
+    gap: 20px;
 }
 
 #logo {
-    color:aqua;
-    text-align: center;
+    color: aqua;
+    height: 50px;
 }
+
+#logo img {
+    width: 100%;
+    height: 100%;
+}
+
 
 #nav {
     display: flex;
@@ -60,7 +94,7 @@ a{
     gap: 20px;
 }
 
-.navbutton{
+.navbutton {
     background-color: #9290C3;
     padding: 10px;
     border-radius: 10px;
@@ -71,9 +105,11 @@ a{
     font-size: 18px;
 }
 
-.navbutton:hover{
+.navbutton:hover {
     background-color: #1B1A55;
     color: #9290C3;
+    transition: background-color 0.1s ease, 
+                color 0.1s ease;
 }
 
 
@@ -82,10 +118,13 @@ a{
 /* FOOTER */
 
 #footer {
-    background-color: grey;
+    background-color: rgb(168, 166, 166);
     width: 100%;
     padding: 5px;
+    padding-left: 10%;
+    padding-right: 10%;
     text-align: center;
+    font-size: 16px;
 }
 
 
@@ -93,14 +132,16 @@ a{
 
 /* HOME PAGE */
 
-#hero{
-    background-image: url('img/hero.jpg');
-    background-color: rgb(34, 11, 136);
+#hero {
+    background-image: url('img/bg/bg_hero.jpg');
+    background-color: black;
     background-size: cover;
     background-position: center;
 
-    height: 50vh;
+    min-height: 50vh;
     padding: 40px;
+    padding-left: var(--left-padding-percent);
+    padding-right: var(--right-padding-percent);
 
     display: flex;
     flex-direction: column;
@@ -109,68 +150,94 @@ a{
     gap: 20px;
 }
 
-#herotext{
-    font-size: 50px;
+#herotext {
+    font-size: 3.3em;
     font-weight: bold;
     color: white;
 }
 
-#herosubtext{
-    font-size: 20px;
+#herosubtext {
+    font-size: 1.25em;
     color: lightgray;
 }
 
-#intro{
-    background-color: aliceblue;
-    padding:40px;
+
+#intro {
+    padding: 40px;
+    padding-left: var(--left-padding-percent);
+    padding-right: var(--right-padding-percent);
 }
 
-#introtext{
-    font-size: 18px;
+#introtext {
+    color: aliceblue;
     text-align: center;
     font-style: italic;
 }
 
-#showcase{
-    background-color: rgb(33, 78, 255);
 
+#showcase {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: stretch;
     flex-wrap: wrap;
-    gap:40px;
+    gap: 40px;
 
-    padding:40px;
+    padding: 40px;
+    padding-left: var(--left-padding-percent);
+    padding-right: var(--right-padding-percent);
 }
 
-.showcase-item{
-    background-color: #1B1A55;
+.showcase-item {
     border-radius: 15px;
 
     width: 30%;
     min-width: 200px;
     padding: 20px;
 
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
-.showcase-item h2{
+.showcase-item h2 {
     font-size: 24px;
-    margin-bottom: 20px;
-    color: #d3ccef;
+    text-align: center;
+    color: var(--accent1);
 }
 
-.showcase-button{
-    font-size: 16px;
+.showcase-button {
     padding: 10px;
     border-radius: 10px;
-    width: 75%;
+    text-align: center;
 
-    margin:auto;
-
-    background-color: #9290C3;
-    color: #1B1A55;
+    background-color: var(--accent2);
+    color: var(--accent3);
     font-weight: bold;
+}
+
+/* hover glow effect with ease animation */
+.showcase-item:hover {
+    box-shadow: 0 0 20px 5px var(--accent1);
+    transition: box-shadow 0.25s ease;
+}
+
+#reviewCTA {
+    background-image: url('img/bg/bg_keyboard.jpg');
+    background-size: cover;
+}
+
+#galleryCTA{
+    background-image: url('img/bg/bg_wires.jpg');
+    background-size: cover;
+}
+
+#recCTA{
+    background-image: url('img/bg/bg_parts.jpg');
+    background-size: cover;
+
 }
 
 
@@ -178,35 +245,76 @@ a{
 
 /* REVIEW PAGE */
 
-.review-container{
-    background-color: aquamarine;
-    color:#1B1A55;
+.review-container {
+    background-color: aliceblue;
+    color: #1B1A55;
     border-radius: 20px;
 
-    margin-left:auto;
-    margin-right:auto;
+    margin-left: var(--left-padding-percent);
+    margin-right: var(--right-padding-percent);
     margin-top: 20px;
     margin-bottom: 20px;
-    width:95%;
 
     padding: 40px;
 }
 
-.review-container h1{
+.review-container h1 {
     margin-bottom: 15px;
 }
 
-.review-container h2{
+.review-container h2 {
     margin-bottom: 5px;
     margin-top: 15px;
 }
 
-.review-container li{
+.review-container li {
     margin-bottom: 5px;
 }
 
-.review-container img{
-    width:50%;
+.review-container img {
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.review-link {
+    color: #1B1A55;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.review-link:hover {
+    color: #9290C3;
+    background-color: #1B1A55;
+}
+
+
+
+
+/* GALLERY PAGE */
+
+.gallerygroup{
+    padding: 40px;
+    margin-left: var(--left-padding-percent);
+    margin-right: var(--right-padding-percent);
+
+}
+
+.galleryheading{
+
+    color: var(--accent1);
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.photogrid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.photogrid img{
+    max-height: 250px;
+    max-width: 100%;
 }
