@@ -42,6 +42,7 @@ html {
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 p {
@@ -241,6 +242,49 @@ p {
 
 }
 
+#microReviewsSection{
+    padding: 40px;
+    margin-left: var(--left-padding-percent);
+    margin-right: var(--right-padding-percent);
+}
+
+#microReviewsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#microReviewsSection h2 {
+    color: var(--accent1);
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#microReviewsSection h3 {
+    color: var(--accent3);
+    font-size: 1.5em;
+}
+
+.microReview {
+    border-radius: 20px;
+    padding: 20px;
+    width: 20%;
+    min-width: 250px;
+
+    background-color: var(--accent2);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+
+
 
 
 
@@ -298,7 +342,15 @@ p {
     padding: 40px;
     margin-left: var(--left-padding-percent);
     margin-right: var(--right-padding-percent);
+}
 
+#gallery-preface{
+    color: aliceblue;
+    font-size: 1.5em;
+    padding: 40px;
+
+    margin-left: var(--left-padding-percent);
+    margin-right: var(--right-padding-percent);
 }
 
 .galleryheading{
@@ -318,6 +370,36 @@ p {
 .photogrid img{
     max-height: 250px;
     max-width: 100%;
+}
+
+.galleryText{
+    color: aliceblue;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+.galleryData{
+    margin-top: 40px;
+}
+
+.galleryData table{
+    border: 1px solid var(--accent1);
+    border-collapse: collapse;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+
+    color: aliceblue;
+}
+
+.galleryData th, td{
+    border: 1px solid var(--accent2);
+    padding: 10px;
+}
+
+.galleryData th{
+    background-color: var(--accent1);
+    color: var(--accent3);
 }
 
 
@@ -352,4 +434,71 @@ p {
 .bioContent img{
     max-width: 50%;
     border-radius: 20px;
+}
+
+.history{
+    color: aliceblue;
+    font-size: 1.25em;
+    margin-top: 20px;
+
+    padding: 40px;
+
+    margin-left: var(--left-padding-percent);
+    margin-right: var(--right-padding-percent);
+}
+
+
+
+
+/* RECOMMENDATIONS PAGE */
+
+.pageTitle{
+    color: var(--accent1);
+    font-size: 2em;
+    margin-bottom: 20px;
+    margin-top:20px;
+
+    margin-left: var(--left-padding-percent);
+    margin-right: var(--right-padding-percent);
+}
+
+.recContainer{
+    padding: 40px;
+    margin-left: var(--left-padding-percent);
+    margin-right: var(--right-padding-percent);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    gap: 20px;
+}
+
+.recItem{
+    border-radius: 20px;
+    padding: 20px;
+    min-width: 300px;
+    width: 45%;
+
+    background-color: var(--accent2);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.recCategory{
+    color: var(--accent3);
+    font-size: 1.75em;
+}
+
+.recItem img{
+    max-width: 75%;
+    border-radius: 20px;
+}
+
+.recDescription{
+    width: 80%;
 }
