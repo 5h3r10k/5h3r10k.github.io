@@ -57,20 +57,72 @@
                 <div id="mapLabelGrid">
 
                     <div class = "mapLabel">
-                        <area shape="rect" coords="140,200,275,285" alt="Arduino Uno" href="">
+                        <area shape="rect" coords="100,145,205,225" alt="Arduino Uno" href="#arduino-uno">
                         <p>Arduino Uno</p>
                     </div>
     
                     <div class = "mapLabel">
-                        <area shape="rect" coords="50,470,255,570" alt="Arduino Uno" href="">
+                        <area shape="rect" coords="30,300,160,355" alt="LCD" href="#lcd">
                         <p>LCD</p>
                     </div>
 
+                    <div class = "mapLabel">
+                        <area shape="rect" coords="170,275,190,295" alt="Temperature Sensor" href="#temp-sensor">
+                        <p>Temperature Sensor</p>
+                    </div>
+
+                    <div class = "mapLabel">
+                        <area shape="rect" coords="205,270,225,295" alt="Potentiometer" href="#pot">
+                        <p>Potentiometer</p>
+                    </div>
+
+                    <div class = "mapLabel">
+                        <area shape="rect" coords="555,85,605,145" alt="Solar Panel" href="#solar-panel">
+                        <p>Solar Panel</p>
+                    </div>
+
                 </div>
-                
 
             </map>
         
+        </div>
+
+        <div id="mapDetails">
+
+            <h2>Project Details</h2>
+
+            <p>
+                The project is a plant monitor that is designed to monitor the temperature, sunlight level, and moisture of the plant and display it on an LCD screen.
+            </p>
+
+
+            <h2>Components</h2>
+
+            <h3 id="arduino-uno">Arduino Uno</h3>
+            <p>
+                The Arduino Uno is the main microcontroller of the project. It is responsible for reading the data from the sensors and displaying it on the LCD screen. Any microcontroller can be used; some replacements include the Arduino Mega and the Raspberry Pi.
+            </p>
+
+            <h3 id="lcd">LCD</h3>
+            <p>
+                LCD stands for Liquid Crystal Display. It is used to display the data from the sensors. The LCD used in the project is a 16x2 LCD. The LCD can be replaced with an OLED display.
+            </p>
+
+            <h3 id="temp-sensor">Temperature Sensor</h3>
+            <p>
+                The temperature sensor is used to measure the temperature of the plant. The temperature sensor used in the project is the TMP36. The temperature sensor can be replaced with any other temperature sensor, such as the DHT11.
+            </p>
+
+            <h3 id="pot">Potentiometer</h3>
+            <p>
+                The potentiometer is used to adjust the contrast of the LCD. The potentiometer used in the project is a 10k potentiometer. The potentiometer can be replaced with a 5k potentiometer.
+            </p>
+
+            <h3 id="solar-panel">Solar Panel</h3>
+            <p>
+                The solar panel is used to measure the sunlight level. The solar panel used in the project is a 5V solar panel. A photoresistor can be used as a replacement for the solar panel; however, photoresistors measure the light intensity from any light source, whereas solar panels only measure sunlight.
+            </p>
+
         </div>
 
             

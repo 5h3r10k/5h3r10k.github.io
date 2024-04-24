@@ -121,6 +121,7 @@ p {
 
 #footer {
     background-color: rgb(168, 166, 166);
+    color: black;
     width: 100%;
     padding: 5px;
     padding-left: 10%;
@@ -276,6 +277,7 @@ p {
     min-width: 250px;
 
     background-color: var(--accent2);
+    color: black;
 
     display: flex;
     flex-direction: column;
@@ -513,15 +515,27 @@ p {
     padding: 40px;
     margin-left: var(--left-padding-percent);
     margin-right: var(--right-padding-percent);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    overflow-x: scroll;
 }
 
 #mapContainer img{
-    max-width: 100%;
+    width: 800px;
     border-radius: 20px;
+
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .mapLabel p{
     color:#9290C3;
+    padding: 10px;
 }
 
 .mapLabel:hover p{
@@ -536,5 +550,25 @@ p {
     flex-wrap: wrap;
     gap: 40px;
 
-    padding: 20px;
+    padding: 5px;
+}
+
+#mapDetails{
+    color: aliceblue;
+    font-size: 1.25em;
+    padding: 40px;
+
+    margin-left: var(--left-padding-percent);
+    margin-right: var(--right-padding-percent);
+}
+
+#mapDetails h2{
+    color: var(--accent1);
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#mapDetails h3{
+    color: var(--accent2);
+    margin-top: 10px;
 }
