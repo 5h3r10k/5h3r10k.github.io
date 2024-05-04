@@ -10,6 +10,7 @@
     --accent1: rgb(76, 167, 246);
     --accent2: #9290C3;
     --accent3: #1B1A55;
+    --accent4: #89fdd3;
 }
 
 
@@ -575,4 +576,41 @@ p {
 #mapDetails h3{
     color: var(--accent2);
     margin-top: 10px;
+}
+
+
+
+
+/* ESSAY PAGE */
+
+#essayContainer{
+    padding: 40px;
+    margin-left: var(--left-padding-percent);
+    margin-right: var(--right-padding-percent);
+}
+
+#essayContainer h1{
+    color: var(--accent1);
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#essayContainer h2{
+    color: var(--accent2);
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+#essayContainer h3{
+    color: var(--accent4);
+    font-size: 1.25em;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+#essayContainer p{
+    color: aliceblue;
+    font-size: 1.25em;
+    margin-bottom: 10px;
 }
