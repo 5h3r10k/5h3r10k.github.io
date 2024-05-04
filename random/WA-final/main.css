@@ -512,25 +512,31 @@ p {
 /* MAP PAGE */
 
 #mapContainer{
-    padding: 40px;
+    margin-top: 40px;
     margin-left: var(--left-padding-percent);
     margin-right: var(--right-padding-percent);
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 20px;
 
     overflow-x: scroll;
+    position: relative;
 }
 
 #mapContainer img{
     width: 800px;
     border-radius: 20px;
+}
 
-    margin-left: auto;
-    margin-right: auto;
+.mapMarker{
+    position: absolute;
+    background-color: #f143fd;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
 }
 
 .mapLabel p{
@@ -546,7 +552,6 @@ p {
 #mapLabelGrid{
     display: flex;
     flex-direction: row;
-    justify-content: center;
     flex-wrap: wrap;
     gap: 40px;
 
@@ -556,7 +561,6 @@ p {
 #mapDetails{
     color: aliceblue;
     font-size: 1.25em;
-    padding: 40px;
 
     margin-left: var(--left-padding-percent);
     margin-right: var(--right-padding-percent);
@@ -565,7 +569,7 @@ p {
 #mapDetails h2{
     color: var(--accent1);
     margin-bottom: 20px;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 #mapDetails h3{
